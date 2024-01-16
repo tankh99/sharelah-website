@@ -6,6 +6,7 @@ import { AppStoreButton, GooglePlayButton } from 'react-mobile-app-button'
 import Link from 'next/link';
 import { FaApple } from "react-icons/fa";
 import { AppStoreButtons } from '@/components/store-buttons'
+import Head from 'next/head'
 
 export default function Home() {
   
@@ -32,7 +33,7 @@ export default function Home() {
           <Header>Contact Us</Header>
           <p>
             For general enquiries, please email us at <a className='text-primary hover:underline' href="mailto:info@sharelah-sg.com">info@sharelah-sg.com </a> 
-            or contact us directly at +65 9276 6847
+            or contact us directly at +65 8838 7524
           </p>
         </Section>
 
@@ -50,9 +51,10 @@ export default function Home() {
   )
 }
 
-// export function generateMetadata() {
-//   return {
-//     title: 'ShareLah',
-//     description: 'An umbrella-sharing service for everyone',
-//   }
-// }
+export function generateMetadata() {
+  return {
+    title: 'ShareLah',
+    description: 'An umbrella-sharing service for everyone',
+    link: 
+  }
+}
