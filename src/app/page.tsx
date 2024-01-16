@@ -55,6 +55,5 @@ export function generateMetadata() {
   return {
     title: 'ShareLah',
     description: 'An umbrella-sharing service for everyone',
-    link: 
   }
 }
