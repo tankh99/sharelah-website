@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image'
 import { Header } from '@/components/Header'
 import { Section } from '@/components/Section'
@@ -7,26 +5,19 @@ import { Button } from '@/components/ui/button'
 import { AppStoreButton, GooglePlayButton } from 'react-mobile-app-button'
 import Link from 'next/link';
 import { FaApple } from "react-icons/fa";
+import { AppStoreButtons } from '@/components/store-buttons'
 
 export default function Home() {
-  const APP_STORE_URL = "https://apps.apple.com/sg/app/sharelah/id1504054992"
-  const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.ShareLah"
+  
   return (
-    <main className="pb-12">
+    <main className="">
       <div className='w-full h-[80vh] px-24 flex flex-col items-center justify-center'>
         <Image src="/logo.png" alt="Sharelah Logo" width={300} height={50} className='mb-12' />
         <h1 className='text-3xl mb-6 text-center'>An Umbrella-Sharing Service for Everyone</h1>
         <p className='text-center'>Register once, rent an umbrella anywhere, anytime, completely free </p>
-        <div className='flex flex-row items-center gap-x-2 mt-4'>
-          <Link target='_blank' href={APP_STORE_URL}>
-            <Image src="/app-store-badge.svg" alt="App Store Badge" width={120} height={50} className='' />
-          </Link>
-          <Link target='_blank' href={PLAY_STORE_URL}>
-            <Image src="/google-play-badge.png" alt="Google Play Badge" width={150} height={50} className='' />
-          </Link>
-        </div>
+        <AppStoreButtons/>
       </div>
-      <div className='px-36'>
+      <div className='px-36 pb-12'>
         {/* About sectio */}
         <Section>
           <Header>About Us</Header>
@@ -36,13 +27,32 @@ export default function Home() {
             To use it, simply download our mobile app, pay a one-time fee of $2 and rent an umbrella from any of our available kiosks for completely free as long as you return within 48 hours.
           </p>
         </Section>
+        {/* Contact Section */}
         <Section>
-          <Header>Data Collection</Header>
+          <Header>Contact Us</Header>
           <p>
-            For legal purposes, we collect user data such as email and mobile numbers in the event of that a user does not return their umbrella on time. 
+            For general enquiries, please email us at <a className='text-primary hover:underline' href="mailto:info@sharelah-sg.com">info@sharelah-sg.com </a> 
+            or contact us directly at +65 9276 6847
           </p>
         </Section>
+
+        </div>
+      <div className='bg-blue-950 text-white w-full px-24 py-12 text-center'>
+        <p className='text-sm mb-4'>
+          For legal purposes, we collect user data such as email and mobile numbers in the event of that a user does not return their umbrella on time. 
+        </p>
+        <p className='flex gap-x-4 justify-center'>
+          <a target='_blank' className='text-sm underline hover:no-underline' href="https://sharelah.s3-ap-southeast-1.amazonaws.com/privacypolicy.html">Privacy Policy</a>
+          <a target='_blank' className='text-sm underline hover:no-underline' href="https://sharelah.s3-ap-southeast-1.amazonaws.com/termsandcondition.html">Terms of Service</a>
+        </p>
       </div>
     </main>
   )
 }
+
+// export function generateMetadata() {
+//   return {
+//     title: 'ShareLah',
+//     description: 'An umbrella-sharing service for everyone',
+//   }
+// }
