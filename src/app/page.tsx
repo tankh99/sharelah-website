@@ -33,7 +33,7 @@ export default function Home() {
           <Header>Contact Us</Header>
           <p>
             For general enquiries, please email us at <a className='text-primary hover:underline' href="mailto:info@sharelah-sg.com">info@sharelah-sg.com </a> 
-            or contact us directly at +65 8838 7524
+            or contact us directly at <a className='text-primary hover:underline' href="https://wa.me/6592766847">+65 9276 6847</a>
           </p>
         </Section>
 
