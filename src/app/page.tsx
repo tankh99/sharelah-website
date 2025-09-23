@@ -28,22 +28,22 @@ const features = [
 
 const howToUseSteps = [
   {
-    icon: <Download size={48} className="mb-4 text-primary" />,
+    icon: <Download size={48} className="text-primary" />,
     title: "Download App",
     description: "Get the Sharelah app from App Store or Google Play Store.",
   },
   {
-    icon: <Bluetooth size={48} className="mb-4 text-primary" />,
+    icon: <Bluetooth size={48} className="text-primary" />,
     title: "Enable Bluetooth",
     description: "Enable Bluetooth to search for nearby stalls.",
   },
   {
-    icon: <Umbrella size={48} className="mb-4 text-primary" />,
+    icon: <Umbrella size={48} className="text-primary" />,
     title: "Take Umbrella",
     description: "Umbrella unlocks automatically after successful scan.",
   },
   {
-    icon: <Repeat size={48} className="mb-4 text-primary" />,
+    icon: <Repeat size={48} className="text-primary" />,
     title: "Return Anywhere",
     description: "Return to any Sharelah station within 2 business days.",
   },
@@ -52,14 +52,14 @@ const howToUseSteps = [
 export default function Home() {
   return (
     <main className="flex-1">
-      <section id="home" className="w-full py-20 md:py-32 lg:py-40 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <section id="home" className="w-full py-20 md:py-32 lg:py-40 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6 text-center flex flex-col items-center justify-center">
           <Image src="/logo.png" alt="Sharelah Logo" width={350} height={60} className="mx-auto mb-8" />
           <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
-            Singapore&apos;s First Automated Umbrella Sharing Service
+            Together, We Stay Dry
           </h1>
           <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8">
-            Making rainy days hassle-free for everyone. Register once, rent an umbrella anywhere, anytime.
+            Making rainy days hassle-free for everyone. Register once and rent an umbrella anywhere, anytime, for no additional fees.
           </p>
           <AppStoreButtons />
         </div>
@@ -70,7 +70,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
               <Card key={index} className="text-center">
-                <CardHeader>
+                <CardHeader className='items-center'>
                   {feature.icon}
                   <CardTitle>{feature.title}</CardTitle>
                 </CardHeader>
@@ -83,11 +83,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="w-full py-12 md:py-20 bg-gray-50 dark:bg-gray-900">
+      <section id="about" className="w-full py-12 md:py-20 bg-primary">
         <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">About Sharelah</h2>
-            <p className="mx-auto max-w-3xl text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-white">About Sharelah</h2>
+            <p className="mx-auto max-w-3xl text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Sharelah is an umbrella-sharing service that aims to spread a spirit of sharing within the community. We are Singapore&apos;s first automated umbrella sharing service, making rainy days hassle-free for everyone.
             </p>
           </div>
@@ -112,10 +112,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="w-full py-12 md:py-20 bg-gray-50 dark:bg-gray-900">
+      <section id="pricing" className="w-full py-12 md:py-20 bg-primary">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid gap-8 md:grid-cols-3">
-            <Card className="text-center">
+          <div className="grid gap-8 md:grid-cols-3 text-white">
+            <Card className="text-center flex flex-col justify-center">
               <CardHeader>
                 <CardTitle className="text-4xl font-bold">$0</CardTitle>
               </CardHeader>
@@ -123,7 +123,7 @@ export default function Home() {
                 <p className="text-lg font-medium">Per Hour Rental</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center flex flex-col justify-center">
               <CardHeader>
                 <CardTitle className="text-4xl font-bold">$2</CardTitle>
               </CardHeader>
@@ -131,7 +131,7 @@ export default function Home() {
                 <p className="text-lg font-medium">One-Time Registration Fee</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center flex flex-col justify-center">
               <CardHeader>
                 <CardTitle className="text-4xl font-bold">24/7</CardTitle>
               </CardHeader>
