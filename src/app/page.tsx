@@ -51,8 +51,8 @@ const howToUseSteps = [
 
 export default function Home() {
   return (
-    <main className="flex-1">
-      <section id="home" className="w-full py-20 md:py-32 lg:py-40 bg-gray-50">
+    <main className="">
+      <section id="home" className="w-full py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6 text-center flex flex-col items-center justify-center">
           <Image src="/logo.png" alt="Sharelah Logo" width={350} height={60} className="mx-auto mb-8" />
           <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
@@ -64,25 +64,6 @@ export default function Home() {
           <AppStoreButtons />
         </div>
       </section>
-
-      <section id="features" className="w-full py-12 md:py-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature, index) => (
-              <Card key={index} className="text-center">
-                <CardHeader className='items-center'>
-                  {feature.icon}
-                  <CardTitle>{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="about" className="w-full py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
