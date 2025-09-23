@@ -40,7 +40,7 @@ dependencies:
     version: 3.3.1
   tailwindcss-animate:
     specifier: ^1.0.7
-    version: 1.0.7(tailwindcss@4.1.13)
+    version: 1.0.7(tailwindcss@4.0.0-alpha.13)
 
 devDependencies:
   '@types/node':
@@ -65,8 +65,8 @@ devDependencies:
     specifier: ^8.5.6
     version: 8.5.6
   tailwindcss:
-    specifier: ^4.1.13
-    version: 4.1.13
+    specifier: 4.0.0-alpha.13
+    version: 4.0.0-alpha.13
   typescript:
     specifier: ^5.9.2
     version: 5.9.2
@@ -5073,16 +5073,20 @@ packages:
     resolution: {integrity: sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==}
     dev: false
 
-  /tailwindcss-animate@1.0.7(tailwindcss@4.1.13):
+  /tailwindcss-animate@1.0.7(tailwindcss@4.0.0-alpha.13):
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
-      tailwindcss: 4.1.13
+      tailwindcss: 4.0.0-alpha.13
     dev: false
+
+  /tailwindcss@4.0.0-alpha.13:
+    resolution: {integrity: sha512-YbLm8I10/bsGr7zrUNxn4Soj9Lc71anTWu/ulgry64rbBU4m0vov539+caeifAiKhsef2NUCW1twaqH3NfJd2Q==}
 
   /tailwindcss@4.1.13:
     resolution: {integrity: sha512-i+zidfmTqtwquj4hMEwdjshYYgMbOrPzb9a0M3ZgNa0JMoZeFC6bxZvO8yr8ozS6ix2SDz0+mvryPeBs2TFE+w==}
+    dev: false
 
   /tapable@2.2.2:
     resolution: {integrity: sha512-Re10+NauLTMCudc7T5WLFLAwDhQ0JWdrMK+9B2M8zR5hRExKmsRDCBA7/aV/pNJFltmBFO5BAMlQFi/vq3nKOg==}
