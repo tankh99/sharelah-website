@@ -26,7 +26,7 @@ export function NewsFeed() {
         const news = await fetchNews();
         setArticles(news);
         setFilteredArticles(news);
-        const uniqueCategories = [...new Set(news.map(article => article.category))];
+        const uniqueCategories = Array.from(new Set(news.map(article => article.category)));
         setCategories(uniqueCategories);
       } catch (err) {
         setError("Failed to load news. Please try again later.");
