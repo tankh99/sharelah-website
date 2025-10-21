@@ -344,7 +344,7 @@ This message was sent from the ShareLah website contact form.
             {/* Tagline with enhanced styling */}
             <div className="space-y-2 mb-6">
               <p className="text-xl md:text-2xl lg:text-3xl text-blue-600 max-w-3xl mx-auto font-medium">
-                Singapore's Community Umbrella Sharing Service
+                Singaporeapos;s Community Umbrella Sharing Service
               </p>
               <p className="text-lg md:text-xl text-gray-600 font-light">
                 Stay dry and help others do the same!
@@ -416,7 +416,7 @@ This message was sent from the ShareLah website contact form.
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-green-500 mt-1 mr-2 h-4 w-4" />
-                    <span>We don't count weekends!</span>
+                    <span>We donapos;t count weekends!</span>
                   </li>
                 </ul>
               </div>
@@ -591,7 +591,7 @@ This message was sent from the ShareLah website contact form.
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl shadow-lg p-8 mb-10 text-white">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Share the Shelter?</h2>
-          <p className="text-xl mb-6 max-w-2xl mx-auto">Join Singapore's community umbrella sharing movement today!</p>
+          <p className="text-xl mb-6 max-w-2xl mx-auto">Join Singaporeapos;s community umbrella sharing movement today!</p>
           <div className="mb-6">
             <AppStoreButtons />
           </div>
@@ -613,7 +613,7 @@ This message was sent from the ShareLah website contact form.
             <div>
               <h3 className="text-xl font-bold text-blue-800 mb-4">Get in Touch</h3>
               <p className="text-gray-600 mb-6">
-                Have questions about ShareLah? Need help with the service? We're here to help! 
+                Have questions about ShareLah? Need help with the service? Weapos;re here to help! 
                 Reach out to us through any of the channels below or fill out the contact form.
               </p>
               
