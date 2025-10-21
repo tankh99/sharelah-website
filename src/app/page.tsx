@@ -5,6 +5,7 @@ import { AppStoreButtons } from '@/components/store-buttons'
 import { MapPin, Smartphone, Umbrella, Wallet, Cloudy, Repeat, Bluetooth, Download, CheckCircle, CreditCard, Clock, Store, Bus, Building, Wifi, WifiOff } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useState, useEffect } from 'react'
+import { SocialIcon } from 'react-social-icons'
 import { getAllStalls } from '@/lib/api'
 import { Stall } from '@/lib/api'
 
@@ -83,8 +84,7 @@ const articles = [
     title: "Istana Open House Collaboration",
     description: "In partnership with SBS Transit, we distributed free umbrellas during the Istana Open House (held quarterly), an event we launched at the end of last year.",
     links: [
-      { url: "https://www.linkedin.com", platform: "LinkedIn" },
-      { url: "https://www.facebook.com", platform: "Facebook" }
+      { url: "https://www.linkedin.com/posts/sbs-transit-ltd_yesterday-our-sbs-transit-team-collaborated-activity-7223631287989760000--9p7", platform: "LinkedIn" },
     ]
   }
 ]
@@ -344,7 +344,7 @@ This message was sent from the ShareLah website contact form.
             {/* Tagline with enhanced styling */}
             <div className="space-y-2 mb-6">
               <p className="text-xl md:text-2xl lg:text-3xl text-blue-600 max-w-3xl mx-auto font-medium">
-                Singaporeapos;s Community Umbrella Sharing Service
+                Singapore&apos;s Community Umbrella Sharing Service
               </p>
               <p className="text-lg md:text-xl text-gray-600 font-light">
                 Stay dry and help others do the same!
@@ -416,7 +416,7 @@ This message was sent from the ShareLah website contact form.
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-green-500 mt-1 mr-2 h-4 w-4" />
-                    <span>We donapos;t count weekends!</span>
+                    <span>We don&apos;t count weekends!</span>
                   </li>
                 </ul>
               </div>
@@ -425,11 +425,11 @@ This message was sent from the ShareLah website contact form.
                 <ul className="text-gray-700 space-y-1">
                   <li className="flex items-start">
                     <Clock className="text-amber-500 mt-1 mr-2 h-4 w-4" />
-                    <span>Auto Charge $2.00 for 3 days extension</span>
+                    <span>Extend 3 days : $2.00</span>
                   </li>
                   <li className="flex items-start">
                     <CreditCard className="text-amber-500 mt-1 mr-2 h-4 w-4" />
-                    <span>Auto Charge $15.00 (Refundable deposit) after 3 days extension</span>
+                    <span>After 3 days : $15.00 (refundable deposit)</span>
                   </li>
                 </ul>
               </div>
@@ -568,7 +568,8 @@ This message was sent from the ShareLah website contact form.
                 <h3 className="font-bold text-lg text-blue-800 mb-2">{article.title}</h3>
                 <p className="text-gray-700 mb-3">{article.description}</p>
                 <a href={article.link} className="text-blue-600 font-medium hover:underline flex items-center">
-                  <span className="mr-2">📱</span> View on {article.platform}
+                  {article.platform === 'Instagram' ? <SocialIcon url={article.link} style={{ height: 25, width: 25 }} className="mr-2" /> : <span className="mr-2">📱</span>}
+                   View on {article.platform}
                 </a>
                 </div>
               ))}
@@ -579,7 +580,7 @@ This message was sent from the ShareLah website contact form.
               <div className="flex flex-wrap gap-4">
                 {articles[2].links?.map((link, index) => (
                   <a key={index} href={link.url} className="text-blue-600 font-medium hover:underline flex items-center">
-                    <span className="mr-2">🔗</span> View {link.platform} Post
+                    <SocialIcon url={link.url} style={{ height: 25, width: 25 }} className="mr-2" /> View {link.platform} Post
                   </a>
               ))}
             </div>
@@ -591,7 +592,7 @@ This message was sent from the ShareLah website contact form.
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl shadow-lg p-8 mb-10 text-white">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Share the Shelter?</h2>
-          <p className="text-xl mb-6 max-w-2xl mx-auto">Join Singaporeapos;s community umbrella sharing movement today!</p>
+          <p className="text-xl mb-6 max-w-2xl mx-auto">Join Singapore&&apos;s community umbrella sharing movement today!</p>
           <div className="mb-6">
             <AppStoreButtons />
           </div>
@@ -613,13 +614,15 @@ This message was sent from the ShareLah website contact form.
             <div>
               <h3 className="text-xl font-bold text-blue-800 mb-4">Get in Touch</h3>
               <p className="text-gray-600 mb-6">
-                Have questions about ShareLah? Need help with the service? Weapos;re here to help! 
+                Have questions about ShareLah? Need help with the service? We&apos;re here to help! 
                 Reach out to us through any of the channels below or fill out the contact form.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <span className="text-green-500 text-xl mr-3">📱</span>
+                  <span className="text-green-500 text-xl mr-3">
+                    <SocialIcon url="https://wa.me/6592766847" style={{ height: 35, width: 35 }} />
+                  </span>
                   <div>
                     <p className="font-semibold text-gray-800">WhatsApp</p>
                     <p className="text-gray-600">+65 9276 6847</p>
@@ -627,7 +630,7 @@ This message was sent from the ShareLah website contact form.
                 </div>
                 
                 <div className="flex items-center">
-                  <span className="text-blue-500 text-xl mr-3">✉️</span>
+                  <span className="text-blue-500 text-4xl mr-3">✉️</span>
                   <div>
                     <p className="font-semibold text-gray-800">Email</p>
                     <p className="text-gray-600">info@sharelahsg.com</p>
@@ -635,7 +638,7 @@ This message was sent from the ShareLah website contact form.
                 </div>
                 
                 <div className="flex items-center">
-                  <span className="text-blue-600 text-xl mr-3">⏰</span>
+                  <span className="text-blue-600 text-4xl mr-3">⏰</span>
                   <div>
                     <p className="font-semibold text-gray-800">Response Time</p>
                     <p className="text-gray-600">Within 24 hours</p>
@@ -646,18 +649,10 @@ This message was sent from the ShareLah website contact form.
               <div className="mt-8">
                 <h4 className="text-lg font-semibold text-blue-800 mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
-                  <a href="https://www.instagram.com" className="text-pink-500 text-2xl hover:scale-110 transition-transform">
-                    📷
-                  </a>
-                  <a href="https://www.facebook.com" className="text-blue-600 text-2xl hover:scale-110 transition-transform">
-                    📘
-                  </a>
-                  <a href="https://www.tiktok.com" className="text-black text-2xl hover:scale-110 transition-transform">
-                    🎵
-                  </a>
-                  <a href="https://www.linkedin.com" className="text-blue-700 text-2xl hover:scale-110 transition-transform">
-                    💼
-                  </a>
+                  <SocialIcon url="https://www.instagram.com" style={{ height: 35, width: 35 }} />
+                  <SocialIcon url="https://www.facebook.com" style={{ height: 35, width: 35 }} />
+                  <SocialIcon url="https://www.tiktok.com" style={{ height: 35, width: 35 }} />
+                  <SocialIcon url="https://www.linkedin.com" style={{ height: 35, width: 35 }} />
                 </div>
               </div>
             </div>
