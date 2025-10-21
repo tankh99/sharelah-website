@@ -9,7 +9,7 @@ export const AppStoreButtons = () => {
   const APP_STORE_URL = "https://apps.apple.com/sg/app/sharelah/id1504054992"
   const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.ShareLah"
   return (
-    <div className='flex flex-row items-center gap-x-2 mt-4'>
+    <div className='flex flex-row items-center justify-center gap-x-2 mt-4'>
       <Link target='_blank' href={APP_STORE_URL}>
         <Image src={AppStoreBadge} alt="App Store Badge" width={120} height={50} className='' />
       </Link>

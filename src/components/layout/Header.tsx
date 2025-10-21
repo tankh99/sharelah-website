@@ -23,15 +23,9 @@ export function Header() {
         </Link>
         <Link
           className="text-sm font-medium text-white hover:underline underline-offset-4"
-          href="#about"
+          href="#how-it-works"
         >
-          About
-        </Link>
-        <Link
-          className="text-sm font-medium text-white hover:underline underline-offset-4"
-          href="#how-to-use"
-        >
-          How to Use
+          How It Works
         </Link>
         <Link
           className="text-sm font-medium text-white hover:underline underline-offset-4"
@@ -41,9 +35,21 @@ export function Header() {
         </Link>
         <Link
           className="text-sm font-medium text-white hover:underline underline-offset-4"
-          href="/articles"
+          href="#stalls"
+        >
+          Stalls
+        </Link>
+        <Link
+          className="text-sm font-medium text-white hover:underline underline-offset-4"
+          href="#articles"
         >
           Articles
+        </Link>
+        <Link
+          className="text-sm font-medium text-white hover:underline underline-offset-4"
+          href="#contact"
+        >
+          Contact
         </Link>
       </nav>
     </header>
