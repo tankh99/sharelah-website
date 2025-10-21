@@ -504,7 +504,7 @@ This message was sent from the ShareLah website contact form.
               </div>
 
               {/* Tabs */}
-              <div className="flex flex-wrap gap-3 mb-6">
+              <div className="flex flex-wrap gap-3 mb-6 justify-center w-full">
                 <TabButton
                   active={activeTab === 'far-east-malls'}
                   onClick={() => setActiveTab('far-east-malls')}
