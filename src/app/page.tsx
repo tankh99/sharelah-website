@@ -71,13 +71,13 @@ const articles = [
   {
     title: "Joo Chiat Pilot with Youth Volunteers",
     description: "This initiative provided free umbrellas without locks or monetary commitments.",
-    link: "https://www.instagram.com",
+    link: "https://www.instagram.com/p/Cz44IUZSJGf/?igshid=NWRjY2QxMjhkNg%3D%3D",
     platform: "Instagram"
   },
   {
     title: "Service Cessation",
     description: "'Not sustainable': Joo Chiat's free umbrella-sharing service to stop due to low return rates by inconsiderate users.",
-    link: "https://www.todayonline.com",
+    link: "https://www.todayonline.com/singapore/joo-chiat-sharella-free-umbrella-sharing-siglap-east-coast-2345411?cid=internal_sharetool_androidphone_19012024_today",
     platform: "TODAY Article"
   },
   {
@@ -337,6 +337,10 @@ This message was sent from the ShareLah website contact form.
               <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-teal-500 rounded-full animate-bounce delay-300"></div>
             </div>
           </div>
+
+          <div className="mb-6">
+            <AppStoreButtons />
+          </div>
           
           {/* Main headline with enhanced styling */}
           <div className="relative z-10">
@@ -410,12 +414,12 @@ This message was sent from the ShareLah website contact form.
               <div className="border-2 border-green-500 rounded-xl p-4 bg-green-50">
                 <h3 className="font-bold text-green-700 mb-2">Free Usage</h3>
                 <ul className="text-gray-700 space-y-1">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mt-1 mr-2 h-4 w-4" />
+                  <li className="flex items-start gap-x-2">
+                    <CheckCircle className="text-green-500 h-4 w-4" />
                     <span>Always Free: Just return the umbrella within 48 hours.</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-500 mt-1 mr-2 h-4 w-4" />
+                  <li className="flex items-start gap-x-2">
+                    <CheckCircle className="text-green-500 h-4 w-4" />
                     <span>We don&apos;t count weekends!</span>
                   </li>
                 </ul>
@@ -423,12 +427,12 @@ This message was sent from the ShareLah website contact form.
               <div className="border-2 border-amber-500 rounded-xl p-4 bg-amber-50">
                 <h3 className="font-bold text-amber-700 mb-2">Extended Use</h3>
                 <ul className="text-gray-700 space-y-1">
-                  <li className="flex items-start">
-                    <Clock className="text-amber-500 mt-1 mr-2 h-4 w-4" />
+                  <li className="flex items-start gap-x-2">
+                    <Clock className="text-amber-500  h-4 w-4" />
                     <span>Extend 3 days : $2.00</span>
                   </li>
-                  <li className="flex items-start">
-                    <CreditCard className="text-amber-500 mt-1 mr-2 h-4 w-4" />
+                  <li className="flex items-start gap-x-2 ">
+                    <CreditCard className="text-amber-500  h-4 w-4" />
                     <span>After 3 days : $15.00 (refundable deposit)</span>
                   </li>
                 </ul>
@@ -441,6 +445,10 @@ This message was sent from the ShareLah website contact form.
                 <CheckCircle className="text-blue-500 mr-2 h-4 w-4 inline" />
                 100% refundable deposit for overdue returns - because our goal is community sharing, not collecting fees!
               </p>
+              <ul className='text-gray-700 space-y-1 list-disc list-inside mt-2'>
+                <li>First refund: free</li>
+                <li>Subsequent refunds : $1.00 each</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -567,7 +575,7 @@ This message was sent from the ShareLah website contact form.
               <div key={index} className="border border-blue-200 rounded-xl p-5 bg-blue-50">
                 <h3 className="font-bold text-lg text-blue-800 mb-2">{article.title}</h3>
                 <p className="text-gray-700 mb-3">{article.description}</p>
-                <a href={article.link} className="text-blue-600 font-medium hover:underline flex items-center">
+                <a target="_blank" href={article.link} className="text-blue-600 font-medium hover:underline flex items-center">
                   {article.platform === 'Instagram' ? <SocialIcon url={article.link} style={{ height: 25, width: 25 }} className="mr-2" /> : <span className="mr-2">📱</span>}
                    View on {article.platform}
                 </a>
@@ -579,7 +587,7 @@ This message was sent from the ShareLah website contact form.
               <p className="text-gray-700 mb-3">{articles[2].description}</p>
               <div className="flex flex-wrap gap-4">
                 {articles[2].links?.map((link, index) => (
-                  <a key={index} href={link.url} className="text-blue-600 font-medium hover:underline flex items-center">
+                  <a target="_blank" key={index} href={link.url} className="text-blue-600 font-medium hover:underline flex items-center">
                     <SocialIcon url={link.url} style={{ height: 25, width: 25 }} className="mr-2" /> View {link.platform} Post
                   </a>
               ))}
@@ -806,19 +814,7 @@ This message was sent from the ShareLah website contact form.
       </section>
 
         {/* Footer */}
-        <footer className="bg-gray-800 rounded-2xl shadow-lg p-6 text-white">
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <Image src="/logo.png" alt="ShareLah Logo" width={150} height={40} className="brightness-0 invert" />
-            </div>
-            <p className="text-gray-300 mb-4">
-              Building a more caring Singapore, one umbrella at a time.
-            </p>
-            <div className="border-t border-gray-700 pt-4">
-              <p className="text-gray-400 text-sm">© 2025 ShareLah SG. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+       
         </div>
     </main>
   )
